@@ -1,0 +1,115 @@
+/* RESET */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
+}
+
+/* COLOR PROPERTIES */
+:root{
+  /* COLORS */
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Gray-500: hsl(0, 0%, 42%);
+  --Gray-950: hsl(0, 0%, 7%);
+  /* FONTS */
+  --fs-16px: 1rem;
+}
+
+/* FONTS PROPERTIES */
+@font-face {
+  font-family: 'figtree';
+  src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* LAYOUT */
+body{
+  min-height: 100svh;
+  font-family: 'figtree';
+  background: var(--Yellow);
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card__image{
+  display: block;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  border-radius: 0.625rem;
+}
+
+.card{
+  max-width: 21.25rem;
+  background: var(--White);
+  border: 0.125rem solid var(--Gray-950);
+  border-radius: 0.9375rem;
+  padding: 0.9375rem;
+  box-shadow: 0.3125rem 0.4375rem 0.0625rem;
+}
+
+.card__category{
+  font-size: 0.875rem;
+  background: var(--Yellow);
+  width: 29%;
+  padding: 0.3125rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3125rem;
+  margin-bottom: 0.9375rem;
+}
+
+.card__date{
+  font-variation-settings: 'wght' 500;
+  font-size: 0.8438rem;
+  margin-bottom: 1.0625rem;
+}
+
+.card__title{
+  font-size: 1.25rem;
+  margin-bottom: 1.0625rem;
+}
+
+.card__title:hover{
+  cursor: pointer;
+  color: var(--Yellow);
+}
+
+.card__paragraph{
+  font-size: 0.875rem;
+  color: var(--Gray-500);
+  font-variation-settings: 'wght' 800;
+  margin-bottom: 1.25rem;
+}
+
+.author{
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+}
+
+.author__image{
+  aspect-ratio: 1/1;
+  width: 2.1875rem;
+  height: 2.1875rem;
+}
+
+.card__category, .card__title, .author__name{
+  color: var(--Gray-950);
+  font-variation-settings: 'wght' 800;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 36rem){
+  .card{
+    min-width: 21.875rem;
+  }
+}
